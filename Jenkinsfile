@@ -10,7 +10,7 @@ pipeline {
             steps {
                 script {
                     sh 'bun install --frozen-lockfile'
-                    sh 'bun test'
+                    sh 'bun run test:apps'
                 }
             }
         }

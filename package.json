@@ -4,6 +4,9 @@
   "workspaces": [
     "apps/*"
   ],
+  "scripts": {
+    "test:apps": "bun test ./apps --jsx-import-source hono/jsx"
+  },
   "private": true,
   "devDependencies": {
     "@tsconfig/bun": "^1.0.10"
