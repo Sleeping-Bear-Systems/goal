@@ -2,7 +2,8 @@
   "$schema": "https://json.schemastore.org/package",
     "name": "@goal/client-datastar",
     "scripts": {
-        "dev": "bun run --hot src/index.ts"
+        "dev": "bun run --hot src/index.ts",
+        "typecheck": "bunx tsc --noEmit"
     },
     "dependencies": {
         "hono": "^4.12.9"
