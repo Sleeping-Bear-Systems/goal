@@ -11,6 +11,7 @@ pipeline {
                 script {
                     sh 'bun install --frozen-lockfile'
                     sh 'bun run test:apps'
+                    sh 'bun run typecheck'
                 }
             }
         }
