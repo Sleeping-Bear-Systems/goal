@@ -4,8 +4,7 @@
   "compilerOptions": {
     "composite": true,
     "jsxImportSource": "hono/jsx",
-    "rootDir": "src",
-    "outDir": "dist"
+    "rootDir": "src"
   },
   "include": ["src"]
 }
