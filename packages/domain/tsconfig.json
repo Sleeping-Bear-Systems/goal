@@ -3,7 +3,6 @@
   "extends": "../../tsconfig.base.json",
   "compilerOptions": {
     "composite": true,
-    "jsxImportSource": "hono/jsx",
     "rootDir": "src"
   },
   "include": ["src"]
