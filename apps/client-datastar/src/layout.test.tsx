@@ -2,7 +2,7 @@ import { describe, expect, test } from "bun:test";
 import { DATASTAR_CDN_URL, Layout } from "./layout.tsx";
 
 describe("Layout", () => {
-  test("renders title, children, and Datastar script", async () => {
+  test("renders title, children, and Datastar script", () => {
     const element = Layout({ title: "Test Page", children: <p>Hello</p> });
     const html = element.toString();
 
