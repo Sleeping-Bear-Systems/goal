@@ -1,21 +1,21 @@
 import type { Child } from "hono/jsx";
 
-export type LayoutProps = {
+export type LayoutProps = Readonly<{
   title: string;
   children?: Child;
-};
+}>;
 
-export function Layout({ title, children }: LayoutProps) {
+export const DATASTAR_CDN_URL: string =
+  "https://cdn.jsdelivr.net/gh/starfederation/datastar@v1.0.1/bundles/datastar.js";
+
+export function Layout(props: LayoutProps) {
   return (
     <html lang="en">
       <head>
-        <title>{title}</title>
-        <script
-          type="module"
-          src="https://cdn.jsdelivr.net/gh/starfederation/datastar@v1.0.1/bundles/datastar.js"
-        />
+        <title>{props.title}</title>
+        <script type="module" src={DATASTAR_CDN_URL} />
       </head>
-      <body>{children}</body>
+      <body>{props.children}</body>
     </html>
   );
 }
