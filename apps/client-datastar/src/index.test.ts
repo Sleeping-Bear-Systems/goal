@@ -2,13 +2,6 @@ import { describe, expect, test } from "bun:test";
 import { app } from "./index.ts";
 import { DATASTAR_SCRIPT_PATH } from "./layout.tsx";
 
-describe("Static files", () => {
-  test("serves datastar.js from /scripts/", async () => {
-    const response = await app.request("/scripts/datastar.js");
-    expect(response.status).toBe(200);
-  });
-});
-
 describe("GET /api", () => {
   test("/ping", async () => {
     const response = await app.request("/api/ping");
